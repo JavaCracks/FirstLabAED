@@ -23,6 +23,7 @@ public class LogicSort {
 
 		return arr;
 
+		
 	}
 
 	public int[] quickSort(int[] arr) {
