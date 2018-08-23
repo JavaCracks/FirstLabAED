@@ -71,7 +71,7 @@ public class RandomPanel extends JPanel  implements ActionListener{
 	 checkRational.setBounds(20, 60, 100,20);
 	 checkRational.setLayout(null);
 
-	 checkAll = new JCheckBox("All Diferents");
+	 checkAll = new JCheckBox("All Differents");
 	 checkAll.setLayout(null);
 	 checkAll.setBounds(120, 20, 150, 20);
 
@@ -114,7 +114,7 @@ public class RandomPanel extends JPanel  implements ActionListener{
 	 
 	 checkSort = new JCheckBox("Sorted");
 	 checkSort.setLayout(null);
-	 checkSort.setBounds(250, 50,160,40);
+	 checkSort.setBounds(250, 40,160,40);
 	 checkSortInversely = new JCheckBox("Sorted Inversely");
 	 checkSortInversely.setLayout(null);
 	 checkSortInversely.setBounds(300, 15, 160, 40);

@@ -33,7 +33,7 @@ public class ManualPanel extends JPanel implements ActionListener{
 	 buttonBack = new JButton(BACK);
 	 buttonBack.addActionListener(this);
 	 buttonBack.setActionCommand(BACK);
-	 buttonBack.setBounds(1, 330, 70, 30);
+	 buttonBack.setBounds(1, 310, 70, 30);
 	    sort = new JButton(SORT);
 	    sort.addActionListener(this);
 	    sort.setActionCommand(SORT);
