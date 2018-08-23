@@ -16,18 +16,24 @@ import javax.swing.border.TitledBorder;
 public class ManualPanel extends JPanel implements ActionListener{
 
 	public final static String SORT= "SORT";
-	
+	public final static String BACK = "BACK";
+
 	private JButton sort;
 	private JLabel manual;
 	private JLabel input;
 	private JTextField inputTxt;
+	private JButton buttonBack;
+
 	
 	public ManualPanel() {
 	setLayout(null);
 	TitledBorder border = new TitledBorder("Sorting Elements");
 	setBorder(border);
 	
-	
+	 buttonBack = new JButton(BACK);
+	 buttonBack.addActionListener(this);
+	 buttonBack.setActionCommand(BACK);
+	 buttonBack.setBounds(1, 330, 70, 30);
 	    sort = new JButton(SORT);
 	    sort.addActionListener(this);
 	    sort.setActionCommand(SORT);
@@ -37,7 +43,7 @@ public class ManualPanel extends JPanel implements ActionListener{
 	    manual= new JLabel("MANUAL");
 	    manual.setLayout(null);
 	    manual.setFont(new Font("ARIAL", 1, 20 ));
-	    manual.setBounds(240,100,100,50); 
+	    manual.setBounds(250,100,100,50); 
 	    
 	    input= new JLabel("Input:");
 	    input.setLayout(null);
@@ -57,6 +63,7 @@ public class ManualPanel extends JPanel implements ActionListener{
 	     add(manual);
 	     add(input);
 	     add(inputTxt);
+	     add(buttonBack);
 	}
 
 	@Override
