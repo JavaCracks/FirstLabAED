@@ -21,6 +21,9 @@ public class MainWindow extends JFrame {
 
 	}
 
+	/**
+	 * This method is to refresh the window with the panels.
+	 */
 	public void refresh() {
 
 		invalidate();
