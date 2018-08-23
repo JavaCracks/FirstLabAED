@@ -96,7 +96,14 @@ public class MainWindow extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+       String a = e.getActionCommand();
+       
+       if(a.equals(MANUAL)) {
+    	   
+   
+			remove(this);
+			add(manual);
+	         repaint();
+       }
 	}
 }
