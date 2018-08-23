@@ -33,7 +33,7 @@ public class ManualPanel extends JPanel implements ActionListener{
 	 buttonBack = new JButton(BACK);
 	 buttonBack.addActionListener(this);
 	 buttonBack.setActionCommand(BACK);
-	 buttonBack.setBounds(1, 330, 70, 30);
+	 buttonBack.setBounds(1, 310, 70, 30);
 	    sort = new JButton(SORT);
 	    sort.addActionListener(this);
 	    sort.setActionCommand(SORT);
@@ -43,7 +43,7 @@ public class ManualPanel extends JPanel implements ActionListener{
 	    manual= new JLabel("MANUAL");
 	    manual.setLayout(null);
 	    manual.setFont(new Font("ARIAL", 1, 20 ));
-	    manual.setBounds(250,80,100,50); 
+	    manual.setBounds(250,100,100,50); 
 	    
 	    input= new JLabel("Input:");
 	    input.setLayout(null);
