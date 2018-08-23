@@ -60,6 +60,12 @@ public class InitialPanel extends JPanel implements ActionListener {
 			mainWindow.add(manual);
 			mainWindow.refresh();
 		}
+		if(a.equals(RANDOM)) {
+			mainWindow.remove(this);
+			mainWindow.add(random);
+			mainWindow.refresh();
+			
+		}
 
 	}
 

@@ -46,38 +46,86 @@ public class RandomPanel extends JPanel  implements ActionListener{
 	 panelSetup = new JPanel();
 	 panelSetup.setLayout(null);
 	 checkInteger = new JCheckBox();
+	 checkInteger.setLayout(null);
 	 checkRational = new JCheckBox();
+	 checkRational.setLayout(null);
+
 	 checkAll = new JCheckBox();
+	 checkAll.setLayout(null);
+
 	 checkRepeated = new JCheckBox();
+	 checkRepeated.setLayout(null);
+
 	 labelQuantity = new JLabel();
+	 labelQuantity.setLayout(null);
 	 labelSetupMsj = new JLabel();
+	 labelSetupMsj.setLayout(null);
+
 	 quantityTxt = new JTextField();
+	 quantityTxt.setLayout(null);
+	 
+	 panelSetup.add(checkInteger);
+	 panelSetup.add(checkRational);
+	 panelSetup.add(checkAll);
+	 panelSetup.add(checkRepeated);
+	 panelSetup.add(labelQuantity);
+	 panelSetup.add(labelSetupMsj);
+	 panelSetup.add(quantityTxt);
+
+
+
+	 
 	 
 	 //second panel
 	 
 	 panelOrder = new JPanel();
+	 panelOrder.setLayout(null);
 	 checkSort = new JCheckBox();
+	 checkSort.setLayout(null);
 	 checkSortInversely = new JCheckBox();
+	 checkSortInversely.setLayout(null);
 	 checkRandom = new JCheckBox();
+	 checkRandom.setLayout(null);
+	 
+	 panelOrder.add(checkSort);
+	 panelOrder.add(checkSortInversely);
+	 panelOrder.add(checkRandom);
+
+
+	 
 
 	 //third panel
 	 
 	 panelGenerate = new JPanel();
+	 panelGenerate.setLayout(null);
 	 checkDisorder = new JCheckBox();
+	 checkDisorder.setLayout(null);
 	 labelPercentage = new JLabel();
+	 labelPercentage.setLayout(null);
 	 percentageTxt = new JTextField();
+	 percentageTxt.setLayout(null);
 	 buttonGenerate = new JButton();
-	 buttonGenerate.addActionListener(this);
-	 buttonGenerate.setActionCommand(GENERATE);
+	 buttonGenerate.setLayout(null);
+	 
+	 panelGenerate.add(checkDisorder);
+	 panelGenerate.add(labelPercentage);
+	 panelGenerate.add(percentageTxt);
+	 panelGenerate.add(buttonGenerate);
+	 
+	 
 	 
 	 //fourth panel
 	 
+	 panelOutput = new JPanel();
+	 panelOutput.setLayout(null);
 	 buttonOutput = new JButton();
 	 buttonOutput.addActionListener(this);
 	 buttonOutput.setActionCommand(OUTPUT);
+	 buttonOutput.setLayout(null);
+
 	 
 
-
+ panelOutput.add(buttonOutput);
 	 
 	 
 

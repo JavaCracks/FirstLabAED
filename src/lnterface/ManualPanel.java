@@ -1,5 +1,6 @@
 package lnterface;
 
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.TextField;
@@ -27,24 +28,35 @@ public class ManualPanel extends JPanel implements ActionListener{
 	setBorder(border);
 	
 	
-	    sort = new JButton();
+	    sort = new JButton(SORT);
 	    sort.addActionListener(this);
 	    sort.setActionCommand(SORT);
 	    sort.setLayout(null);
-	    sort.setBounds(210, 100, 100, 50);
+	    sort.setBounds(240, 250, 100, 50);
 	    
 	    manual= new JLabel("MANUAL");
 	    manual.setLayout(null);
+	    manual.setFont(new Font("ARIAL", 1, 20 ));
+	    manual.setBounds(240,100,100,50); 
 	    
 	    input= new JLabel("Input:");
 	    input.setLayout(null);
+	    input.setFont(new Font("ARIAL", 1, 16 ));
+	    input.setBounds(120,160,80,50); 
+
+	    
 	    
 	    inputTxt = new JTextField();
 	    inputTxt.setLayout(null);
+	    inputTxt.setBounds(200,170,250,30); 
+
 	    
 	    
 	    
 	     add(sort);
+	     add(manual);
+	     add(input);
+	     add(inputTxt);
 	}
 
 	@Override
