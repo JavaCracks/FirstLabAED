@@ -25,7 +25,7 @@ public class InitialPanel extends JPanel implements ActionListener {
 		this.mainWindow = mainWindow;
 
 		setLayout(null);
-		manual = new ManualPanel();
+		manual = new ManualPanel(this);
 		random = new RandomPanel();
 
 		manualButton = new JButton(MANUAL);
