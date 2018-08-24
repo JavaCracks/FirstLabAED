@@ -11,6 +11,39 @@ public class LogicSort {
 	randomGenerator = new RandomGenerator();	
 		
 	}
+	
+	public int[] getAnArrayOfIntegers(String[] a) {
+		
+		
+	int[] integers = new int[a.length];
+	
+	for(int i = 0 ; i< a.length;i++) {
+		
+	integers[i] = Integer.parseInt(a[i]);	
+		
+	}
+	
+	return integers;
+		
+		
+	}
+	
+	public double[] getAnArrayOfRationals(String[] a) {
+		
+	double[] rationals = new double[a.length];
+	
+	for(int i = 0; i<a.length; i++) {
+		
+	rationals[i] = Double.parseDouble(a[i]);
+		
+	}
+	
+	return rationals;
+		
+	}
+	
+		
+
 
 	public RandomGenerator getRandomGenerator() {
 

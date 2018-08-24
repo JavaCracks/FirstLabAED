@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Random;
+
 public class RandomGenerator {
 
 	private int quantity;
@@ -7,6 +9,7 @@ public class RandomGenerator {
 	private boolean inversely;
 	private boolean randomOrder;
 	private double percentageDisorder;
+	private Random random;
 
 	public RandomGenerator() {
 		
@@ -15,7 +18,14 @@ public class RandomGenerator {
 	inversely = false;
 	randomOrder = false;
 	percentageDisorder = 0.0;
+	random = new Random();
 
+	}
+	
+	public Random getRandom() {
+		
+	return random;	
+		
 	}
 
 	public void setQuantity(int quantity) {
