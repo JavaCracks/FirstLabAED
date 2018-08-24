@@ -1,95 +1,81 @@
 package model;
 
-public class Random {
+public class RandomGenerator {
 
-	
 	private int quantity;
 	private boolean repeated;
 	private boolean inversely;
 	private boolean randomOrder;
 	private double percentageDisorder;
-	
-	
-	
-	
-	
-	public Random() {
+
+	public RandomGenerator() {
 		
-		
-		
-		
+	quantity = 0;
+	repeated = false;
+	inversely = false;
+	randomOrder = false;
+	percentageDisorder = 0.0;
+
 	}
-	
-	
-	
+
 	public void setQuantity(int quantity) {
-		
-	this.quantity = quantity;	
-		
+
+		this.quantity = quantity;
+
 	}
-	
+
 	public int getQuantity() {
-		
-	return quantity;		
-		
+
+		return quantity;
+
 	}
-	
-	
+
 	public void setRepeated(boolean repeated) {
-		
-	this.repeated = repeated;	
-		
+
+		this.repeated = repeated;
+
 	}
-	
+
 	public boolean isRepeated() {
-		
-	return repeated;	
-		
+
+		return repeated;
+
 	}
-	
+
 	public void setInversely(boolean inversely) {
-		
-	this.inversely = inversely;
-		
+
+		this.inversely = inversely;
+
 	}
-	
+
 	public boolean isInversely() {
-		
-	return inversely;	
-		
+
+		return inversely;
+
 	}
-	
+
 	public void setRandomOrder(boolean randomOrder) {
-		
-	this.randomOrder = randomOrder;	
-		
+
+		this.randomOrder = randomOrder;
+
 	}
-	
+
 	public boolean isRandomOrder() {
-		
-	return randomOrder;	
-		
+
+		return randomOrder;
+
 	}
-	
+
 	public void setPercentageDisorder(double percentageDisorder) {
-		
+
 		this.percentageDisorder = percentageDisorder;
-		
+
 	}
-	
+
 	public double getPercentageDisorder() {
-		
-	return percentageDisorder;
-		
+
+		return percentageDisorder;
+
 	}
-	
-	public static void main(String[] args) {
-		
-	System.out.println();	
-		
-	}
-	
-	
-	
-	
+
 }
