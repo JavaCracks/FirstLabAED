@@ -116,6 +116,7 @@ public class InitialPanel extends JPanel implements ActionListener {
 	public void setText(JLabel text) {
 		this.text = text;
 	}
+	
 
 
 	@Override

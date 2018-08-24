@@ -46,6 +46,10 @@ public class MainWindow extends JFrame {
 
 	}
 
+	public int[] generateIntegerRepeated(int quantity, boolean repeated, int range) {
+		
+		return logic.generateIntegerRepeated(quantity, repeated, range);
+	}
 	public static void main(String[] args) {
 
 		MainWindow window = new MainWindow();

@@ -4,10 +4,12 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
@@ -359,6 +361,20 @@ public class RandomPanel extends JPanel implements ActionListener {
 	public void setButtonBack(JButton buttonBack) {
 		this.buttonBack = buttonBack;
 	}
+	
+	public int[] generateInteger() {
+		
+		boolean value = false;
+		if(checkRepeated.isSelected()) {
+			value=true;
+		}
+		int  quantityValue = Integer.parseInt(quantityTxt.getText());
+		int  rangeValue = Integer.parseInt(rangeTxt.getText());
+
+		
+		return  initialPanel.getMainWindow().generateIntegerRepeated(quantityValue, value, rangeValue );
+		 
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -368,6 +384,12 @@ public class RandomPanel extends JPanel implements ActionListener {
 			initialPanel.getMainWindow().add(initialPanel);
 			initialPanel.getMainWindow().refresh();
 			
+			
+		}
+		
+		if(e.getActionCommand().equals(GENERATE)) {
+			
+		JOptionPane.showMessageDialog(null, Arrays.toString(generateInteger()));
 			
 		}
 
