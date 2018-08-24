@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -23,6 +24,8 @@ public class ManualPanel extends JPanel implements ActionListener{
 	private JLabel input;
 	private JTextField inputTxt;
 	private JButton buttonBack;
+	private JCheckBox checkInteger;
+	private JCheckBox checkRational;
 
 	
 	public ManualPanel() {
@@ -56,6 +59,12 @@ public class ManualPanel extends JPanel implements ActionListener{
 	    inputTxt.setLayout(null);
 	    inputTxt.setBounds(200,170,250,30); 
 
+	    checkInteger = new JCheckBox("Integer");
+		checkInteger.setLayout(null);
+		checkInteger.setBounds(320, 210, 100, 40);
+		checkRational = new JCheckBox("Rational");
+		checkRational.setLayout(null);
+		checkRational.setBounds(200, 210, 100, 40);
 	    
 	    
 	    
@@ -64,7 +73,96 @@ public class ManualPanel extends JPanel implements ActionListener{
 	     add(input);
 	     add(inputTxt);
 	     add(buttonBack);
+	 	
+			add(checkInteger);
+			add(checkRational);
+	} 
+	
+	
+
+	public JButton getSort() {
+		return sort;
 	}
+
+
+
+	public void setSort(JButton sort) {
+		this.sort = sort;
+	}
+
+
+
+	public JLabel getManual() {
+		return manual;
+	}
+
+
+
+	public void setManual(JLabel manual) {
+		this.manual = manual;
+	}
+
+
+
+	public JLabel getInput() {
+		return input;
+	}
+
+
+
+	public void setInput(JLabel input) {
+		this.input = input;
+	}
+
+
+
+	public JTextField getInputTxt() {
+		return inputTxt;
+	}
+
+
+
+	public void setInputTxt(JTextField inputTxt) {
+		this.inputTxt = inputTxt;
+	}
+
+
+
+	public JButton getButtonBack() {
+		return buttonBack;
+	}
+
+
+
+	public void setButtonBack(JButton buttonBack) {
+		this.buttonBack = buttonBack;
+	}
+
+
+
+	public JCheckBox getCheckInteger() {
+		return checkInteger;
+	}
+
+
+
+	public void setCheckInteger(JCheckBox checkInteger) {
+		this.checkInteger = checkInteger;
+	}
+
+
+
+	public JCheckBox getCheckRational() {
+		return checkRational;
+	}
+
+
+
+	public void setCheckRational(JCheckBox checkRational) {
+		this.checkRational = checkRational;
+	}
+
+
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

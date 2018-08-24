@@ -17,6 +17,8 @@ public class InitialPanel extends JPanel implements ActionListener {
 	private ManualPanel manual;
 	private RandomPanel random;
 	private JLabel text;
+	
+
 
 	public InitialPanel(MainWindow mainWindow) {
 
@@ -37,6 +39,10 @@ public class InitialPanel extends JPanel implements ActionListener {
 		randomButton.addActionListener(this);
 		randomButton.setLayout(null);
 		randomButton.setBounds(180, 180, 100, 40);
+		
+		
+
+
 
 		text = new JLabel("Choose an Option");
 		text.setLayout(null);
@@ -48,7 +54,69 @@ public class InitialPanel extends JPanel implements ActionListener {
 		add(randomButton);
 
 		add(text);
+	
 	}
+     
+	
+	public MainWindow getMainWindow() {
+		return mainWindow;
+	}
+
+
+	public void setMainWindow(MainWindow mainWindow) {
+		this.mainWindow = mainWindow;
+	}
+
+
+	public JButton getManualButton() {
+		return manualButton;
+	}
+
+
+	public void setManualButton(JButton manualButton) {
+		this.manualButton = manualButton;
+	}
+
+
+	public JButton getRandomButton() {
+		return randomButton;
+	}
+
+
+	public void setRandomButton(JButton randomButton) {
+		this.randomButton = randomButton;
+	}
+
+
+	public ManualPanel getManual() {
+		return manual;
+	}
+
+
+	public void setManual(ManualPanel manual) {
+		this.manual = manual;
+	}
+
+
+	public RandomPanel getRandom() {
+		return random;
+	}
+
+
+	public void setRandom(RandomPanel random) {
+		this.random = random;
+	}
+
+
+	public JLabel getText() {
+		return text;
+	}
+
+
+	public void setText(JLabel text) {
+		this.text = text;
+	}
+
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
