@@ -40,8 +40,13 @@ public class RandomPanel extends JPanel implements ActionListener {
 	private JButton buttonBack;
 	private JLabel range;
 	private JTextField rangeTxt;
-	public RandomPanel() {
+	
+	private InitialPanel initialPanel;
 
+	public RandomPanel(InitialPanel initialPanel) {
+
+		this.initialPanel = initialPanel;
+		
 		setLayout(new GridLayout(4, 1));
 		TitledBorder border = new TitledBorder("Setup to generate");
 
@@ -166,8 +171,6 @@ public class RandomPanel extends JPanel implements ActionListener {
 		add(panelGenerate);
 		add(panelOutput);
 
-		
-		
 	}
  
 	    
@@ -200,245 +203,173 @@ public class RandomPanel extends JPanel implements ActionListener {
 		return panelSetup;
 	}
 
-
-
 	public void setPanelSetup(JPanel panelSetup) {
 		this.panelSetup = panelSetup;
 	}
-
-
 
 	public JPanel getPanelOrder() {
 		return panelOrder;
 	}
 
-
-
 	public void setPanelOrder(JPanel panelOrder) {
 		this.panelOrder = panelOrder;
 	}
-
-
 
 	public JPanel getPanelGenerate() {
 		return panelGenerate;
 	}
 
-
-
 	public void setPanelGenerate(JPanel panelGenerate) {
 		this.panelGenerate = panelGenerate;
 	}
-
-
 
 	public JPanel getPanelOutput() {
 		return panelOutput;
 	}
 
-
-
 	public void setPanelOutput(JPanel panelOutput) {
 		this.panelOutput = panelOutput;
 	}
-
-
 
 	public JCheckBox getCheckInteger() {
 		return checkInteger;
 	}
 
-
-
 	public void setCheckInteger(JCheckBox checkInteger) {
 		this.checkInteger = checkInteger;
 	}
-
-
 
 	public JCheckBox getCheckRational() {
 		return checkRational;
 	}
 
-
-
 	public void setCheckRational(JCheckBox checkRational) {
 		this.checkRational = checkRational;
 	}
 
-
-
+		
 	public JCheckBox getCheckAll() {
 		return checkAll;
 	}
-
-
 
 	public void setCheckAll(JCheckBox checkAll) {
 		this.checkAll = checkAll;
 	}
 
-
-
 	public JCheckBox getCheckRepeated() {
 		return checkRepeated;
 	}
-
-
 
 	public void setCheckRepeated(JCheckBox checkRepeated) {
 		this.checkRepeated = checkRepeated;
 	}
 
-
-
 	public JCheckBox getCheckSort() {
 		return checkSort;
 	}
-
-
 
 	public void setCheckSort(JCheckBox checkSort) {
 		this.checkSort = checkSort;
 	}
 
-
-
 	public JCheckBox getCheckSortInversely() {
 		return checkSortInversely;
 	}
-
-
 
 	public void setCheckSortInversely(JCheckBox checkSortInversely) {
 		this.checkSortInversely = checkSortInversely;
 	}
 
-
-
 	public JCheckBox getCheckRandom() {
 		return checkRandom;
 	}
-
-
 
 	public void setCheckRandom(JCheckBox checkRandom) {
 		this.checkRandom = checkRandom;
 	}
 
-
-
 	public JCheckBox getCheckDisorder() {
 		return checkDisorder;
 	}
-
-
 
 	public void setCheckDisorder(JCheckBox checkDisorder) {
 		this.checkDisorder = checkDisorder;
 	}
 
-
-
 	public JLabel getLabelQuantity() {
 		return labelQuantity;
 	}
-
-
 
 	public void setLabelQuantity(JLabel labelQuantity) {
 		this.labelQuantity = labelQuantity;
 	}
 
-
-
 	public JLabel getLabelSetupMsj() {
 		return labelSetupMsj;
 	}
-
-
 
 	public void setLabelSetupMsj(JLabel labelSetupMsj) {
 		this.labelSetupMsj = labelSetupMsj;
 	}
 
-
-
 	public JLabel getLabelPercentage() {
 		return labelPercentage;
 	}
-
-
 
 	public void setLabelPercentage(JLabel labelPercentage) {
 		this.labelPercentage = labelPercentage;
 	}
 
-
-
 	public JTextField getQuantityTxt() {
 		return quantityTxt;
 	}
-
-
 
 	public void setQuantityTxt(JTextField quantityTxt) {
 		this.quantityTxt = quantityTxt;
 	}
 
-
-
 	public JTextField getPercentageTxt() {
 		return percentageTxt;
 	}
-
-
 
 	public void setPercentageTxt(JTextField percentageTxt) {
 		this.percentageTxt = percentageTxt;
 	}
 
-
-
 	public JButton getButtonGenerate() {
 		return buttonGenerate;
 	}
-
-
 
 	public void setButtonGenerate(JButton buttonGenerate) {
 		this.buttonGenerate = buttonGenerate;
 	}
 
-
-
 	public JButton getButtonOutput() {
 		return buttonOutput;
 	}
-
-
 
 	public void setButtonOutput(JButton buttonOutput) {
 		this.buttonOutput = buttonOutput;
 	}
 
-
-
 	public JButton getButtonBack() {
 		return buttonBack;
 	}
-
-
 
 	public void setButtonBack(JButton buttonBack) {
 		this.buttonBack = buttonBack;
 	}
 
-
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		if(e.getActionCommand().equals(BACK)) {
+			
+			initialPanel.getMainWindow().remove(this);
+			initialPanel.getMainWindow().add(initialPanel);
+			initialPanel.getMainWindow().refresh();
+			
+			
+		}
 
 	}
 

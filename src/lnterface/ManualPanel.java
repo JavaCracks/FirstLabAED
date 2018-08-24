@@ -172,6 +172,15 @@ public class ManualPanel extends JPanel implements ActionListener {
 			}
 
 		}
+		
+		
+		if(e.getActionCommand().equals(BACK)) {
+			
+			getMainWindow().remove(this);
+			getMainWindow().add(initialPanel);
+			getMainWindow().refresh();
+			
+		}
 
 	}
 
