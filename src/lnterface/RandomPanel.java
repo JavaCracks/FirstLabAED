@@ -38,7 +38,8 @@ public class RandomPanel extends JPanel implements ActionListener {
 	private JButton buttonGenerate;
 	private JButton buttonOutput;
 	private JButton buttonBack;
-
+	private JLabel range;
+	private JTextField rangeTxt;
 	public RandomPanel() {
 
 		setLayout(new GridLayout(4, 1));
@@ -69,17 +70,28 @@ public class RandomPanel extends JPanel implements ActionListener {
 		checkRepeated.setLayout(null);
 		checkRepeated.setBounds(120, 60, 150, 20);
 
+		labelSetupMsj = new JLabel();
+		labelSetupMsj.setLayout(null);
 		labelQuantity = new JLabel("Quantity:");
 		labelQuantity.setFont(new Font("Arial", 1, 16));
 		labelQuantity.setLayout(null);
-		labelQuantity.setBounds(310, 40, 100, 20);
-		labelSetupMsj = new JLabel();
-		labelSetupMsj.setLayout(null);
+		labelQuantity.setBounds(310, 20, 100, 20);
+		
+		
 
 		quantityTxt = new JTextField();
 		quantityTxt.setLayout(null);
-		quantityTxt.setBounds(400, 40, 150, 20);
+		quantityTxt.setBounds(400, 20, 150, 20);
 
+		range = new JLabel("Range:");
+		range.setLayout(null);
+		range.setFont(new Font("Arial", 1, 16));
+		range.setBounds(310,60,100,20);
+		
+		rangeTxt = new JTextField();
+		rangeTxt.setLayout(null);
+		rangeTxt.setBounds(400,60,150,20);
+		
 		panelSetup.add(checkInteger);
 		panelSetup.add(checkRational);
 		panelSetup.add(checkAll);
@@ -87,6 +99,8 @@ public class RandomPanel extends JPanel implements ActionListener {
 		panelSetup.add(labelQuantity);
 		panelSetup.add(labelSetupMsj);
 		panelSetup.add(quantityTxt);
+		panelSetup.add(range);
+		panelSetup.add(rangeTxt);
 
 		// second panel
 
@@ -158,6 +172,30 @@ public class RandomPanel extends JPanel implements ActionListener {
  
 	    
 	
+	public JLabel getRange() {
+		return range;
+	}
+
+
+
+	public void setRange(JLabel range) {
+		this.range = range;
+	}
+
+
+
+	public JTextField getRangeTxt() {
+		return rangeTxt;
+	}
+
+
+
+	public void setRangeTxt(JTextField rangeTxt) {
+		this.rangeTxt = rangeTxt;
+	}
+
+
+
 	public JPanel getPanelSetup() {
 		return panelSetup;
 	}

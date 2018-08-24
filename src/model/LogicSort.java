@@ -12,6 +12,7 @@ public class LogicSort {
 		
 	}
 	
+	
 	public int[] getAnArrayOfIntegers(String[] a) {
 		
 		
@@ -42,8 +43,49 @@ public class LogicSort {
 		
 	}
 	
-		
-
+     public  int[] generateIntegerRepeated(int quantity, boolean repeated, int range ) {
+    	 
+    	  int[] valores= new int[quantity];
+    	  
+    	  for(int i=0; i<quantity; i++) {
+    	  if(repeated==true) {
+    		  valores[i]= randomGenerator.getRandom().nextInt(range-1) + 1;
+    	  }
+    	  }
+    	  
+    	   return valores;
+    }
+     
+     public  int[] generateRationalRepeated(int quantity, boolean repeated, int range ) {
+    	 
+   	  int[] valores= new int[quantity];
+   	  
+   	  for(int i=0; i<quantity; i++) {
+   	  if(repeated==true) {
+   		  valores[i]= randomGenerator.getRandom().nextInt(range-1) + 1;
+   	  }
+   	  }
+   	  
+   	   return valores;
+   } 
+     
+     
+     public  int[] generateIntegerNotRepeated(int quantity, boolean repeated, int range ) {
+    	 
+      	  int[] valores= new int[quantity];
+      	  
+      	  for(int i=0; i<quantity; i++) {
+      	  if(repeated==false) {
+      		  valores[i]= randomGenerator.getRandom().nextInt(range-1) + 1;
+      	  }
+      	  }
+      	  
+      	   return valores;
+      }
+      
+   
+       
+     
 
 	public RandomGenerator getRandomGenerator() {
 
