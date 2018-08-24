@@ -61,7 +61,9 @@ public class ManualPanel extends JPanel implements ActionListener {
 		inputTxt = new JTextField();
 		inputTxt.setLayout(null);
 		inputTxt.setBounds(200, 170, 250, 30);
-
+		inputTxt.setToolTipText("Ingresa tus elementos y los separas por comas ---> , <---");
+		
+		
 		checkInteger = new JCheckBox("Integer");
 		checkInteger.setLayout(null);
 		checkInteger.setBounds(320, 210, 100, 40);

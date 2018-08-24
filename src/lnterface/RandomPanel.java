@@ -365,7 +365,7 @@ public class RandomPanel extends JPanel implements ActionListener {
 	public int[] generateInteger() {
 		
 		boolean value = false;
-		if(checkRepeated.isSelected()) {
+		if(getCheckAll().isSelected()) {
 			value=true;
 		}
 		int  quantityValue = Integer.parseInt(quantityTxt.getText());
@@ -389,10 +389,26 @@ public class RandomPanel extends JPanel implements ActionListener {
 		
 		if(e.getActionCommand().equals(GENERATE)) {
 			
-		JOptionPane.showMessageDialog(null, Arrays.toString(generateInteger()));
+		int[] arr = generateInteger();	
+		
+		
+		if(checkRandom.isSelected()) {
+		
+		JOptionPane.showMessageDialog(null, Arrays.toString(arr));
+		
+		}
+		
+		if(checkSort.isSelected()) {
+			
+		JOptionPane.showMessageDialog(null,Arrays.toString(initialPanel.getMainWindow().getLogicSort().countingSort(arr)));
+		
+		}
+			
+		}
 			
 		}
 
-	}
-
 }
+
+
+
